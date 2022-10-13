@@ -1,0 +1,4 @@
+UniRef90_A0A3E2EHM9	ddr_tdr
+UniRef90_A0A3N0AZ23	ddr_tdr
+UniRef90_F7V1S3	ddr_tdr
+UniRef90_M9P0B3	ddr_tdr
