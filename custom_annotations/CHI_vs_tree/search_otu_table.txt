@@ -1,2 +1,0 @@
-#ID	chi_uniref90_top300_exp
-graftmdeqc1mj2.aln	103
