@@ -1,0 +1,2 @@
+#ID	chi_uniref90_top300_exp	ConsensusLineage
+1	103	Root; chi
