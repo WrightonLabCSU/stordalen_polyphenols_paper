@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	ncbi_nr_seeds
+reads detected:	1
+reads placed in tree:	1076
+Runtime (seconds):
+Search step:	8.01
+Alignment step:	22.33
+Tree insertion step:	100.64

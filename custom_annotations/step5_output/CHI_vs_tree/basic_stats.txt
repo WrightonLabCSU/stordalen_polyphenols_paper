@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	chi_uniref90_top300_exp
+reads detected:	1
+reads placed in tree:	103
+Runtime (seconds):
+Search step:	0.4
+Alignment step:	0.54
+Tree insertion step:	8.04

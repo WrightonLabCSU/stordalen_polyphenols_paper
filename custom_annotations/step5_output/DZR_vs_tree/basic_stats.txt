@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	seeds
+reads detected:	1
+reads placed in tree:	18
+Runtime (seconds):
+Search step:	0.28
+Alignment step:	0.46
+Tree insertion step:	2.02

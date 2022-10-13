@@ -1,0 +1,2 @@
+#ID	ddr_tdr_uniref90_top300_exp
+graftmgmt99hk2.aln	375

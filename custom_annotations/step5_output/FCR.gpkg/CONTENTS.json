@@ -1,0 +1,1 @@
+{"graftm_package_version": 3, "align_hmm": "graftmohnuhu94_align.hmm", "search_hmms": ["graftmpllz4gp3_search.hmm"], "refpkg": "fcr.gpkg.refpkg", "trusted_cutoff": false, "range": 982.5436046511629, "unaligned_sequence_database": "pulled_leaves.faa", "diamond_database": "pulled_leaves.dmnd"}

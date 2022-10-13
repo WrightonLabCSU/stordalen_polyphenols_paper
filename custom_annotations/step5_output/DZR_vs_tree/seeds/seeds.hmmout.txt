@@ -1,0 +1,32 @@
+#                                                                                                       --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                                   accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                           ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+DZR_BAJ22678.1                                  -            644 graftm5nv2i3zl.aln   -            642         0 1035.9   1.9   1   1         0         0 1035.8   1.9     1   642     1   644     1   644 0.99 -
+DZR_WP_013979957.1                              -            644 graftm5nv2i3zl.aln   -            642         0 1034.3   1.2   1   1         0         0 1034.2   1.2     1   642     1   644     1   644 0.99 -
+DZR_BAL46930.1                                  -            644 graftm5nv2i3zl.aln   -            642  6.4e-261  857.2   3.4   1   1  7.1e-261  7.1e-261  857.0   3.4     1   642     1   644     1   644 0.98 -
+DZR_AFV15453.1                                  -            644 graftm5nv2i3zl.aln   -            642  7.3e-261  857.0   3.8   1   1  8.2e-261  8.2e-261  856.8   3.8     1   642     1   644     1   644 0.98 -
+outDCR_Gmet_2193                                -            645 graftm5nv2i3zl.aln   -            642  1.1e-126  413.6   0.0   1   1  1.4e-126  1.4e-126  413.3   0.0     7   640    11   639     7   641 0.92 -
+outDCR_LMON_0489                                -            664 graftm5nv2i3zl.aln   -            642  2.4e-124  405.9   0.1   1   1  2.7e-124  2.7e-124  405.7   0.1     5   636     3   652     1   658 0.90 -
+FCR_CTSoil_081_FCR_day10_bin4_scaffold_102_0003 -            656 graftm5nv2i3zl.aln   -            642  1.5e-119  390.1   5.4   1   1    2e-119    2e-119  389.7   5.4     4   641     2   654     1   655 0.89 -
+FCR_WP_218118681.1                              -            661 graftm5nv2i3zl.aln   -            642   2.7e-99  323.2   3.4   1   1   3.3e-99   3.3e-99  322.9   3.4     1   642     1   660     1   660 0.88 -
+FCR_WP_173782381.1                              -            677 graftm5nv2i3zl.aln   -            642   1.7e-98  320.6   0.1   1   1   4.1e-98   4.1e-98  319.3   0.1     2   642     4   676     1   676 0.86 -
+outDCR_KFB96642.1                               -            672 graftm5nv2i3zl.aln   -            642     1e-95  311.4   0.1   1   1     8e-92     8e-92  298.5   0.0     5   528     2   519     1   528 0.91 -
+FCR_AGS82961.1                                  -            678 graftm5nv2i3zl.aln   -            642   6.1e-94  305.5   0.0   1   1   1.6e-93   1.6e-93  304.1   0.0     2   642     4   677     1   677 0.85 -
+outDCR_PP_2008                                  -            693 graftm5nv2i3zl.aln   -            642   1.5e-92  300.9   0.7   1   1   8.5e-90   8.5e-90  291.8   0.4     1   527    16   538    16   545 0.92 -
+FCR_WP_195609257.1                              -            674 graftm5nv2i3zl.aln   -            642   1.5e-91  297.6   0.0   1   1   2.3e-91   2.3e-91  296.9   0.0     2   642     4   673     1   673 0.86 -
+outDCR_ECL_04485                                -            673 graftm5nv2i3zl.aln   -            642   1.8e-90  294.0   0.0   1   1   1.1e-87   1.1e-87  284.8   0.0     5   528     3   520     1   534 0.91 -
+FCR_WP_154024723.1                              -            663 graftm5nv2i3zl.aln   -            642   2.1e-90  293.8   0.0   1   1   2.5e-90   2.5e-90  293.6   0.0     5   640     2   659     1   661 0.86 -
+outDCR_Tharo_2562                               -            656 graftm5nv2i3zl.aln   -            642   1.2e-88  288.0   0.0   1   1   1.5e-88   1.5e-88  287.7   0.0     6   639     9   653     6   656 0.86 -
+FCR_CTSoil_07_FCR_day10_bin2_scaffold_458_0047  -            570 graftm5nv2i3zl.aln   -            642   1.6e-76  248.0   0.0   1   1   5.6e-73   5.6e-73  236.2   0.0    71   486    80   517     2   524 0.80 -
+outDCR_W7YS53_9BACI                             -            371 graftm5nv2i3zl.aln   -            642   1.2e-32  102.9   0.0   1   2   2.7e-26   2.7e-26   82.0   0.0     8   226     9   229     1   262 0.89 -
+outDCR_W7YS53_9BACI                             -            371 graftm5nv2i3zl.aln   -            642   1.2e-32  102.9   0.0   2   2   2.8e-07   2.8e-07   19.2   0.0   303   337   324   358   309   361 0.90 -
+#
+# Program:         hmmsearch
+# Version:         3.2.1 (June 2018)
+# Pipeline mode:   SEARCH
+# Query file:      dzr_uniref100.gpkg/graftm9yg0etjx_search.hmm
+# Target file:     -
+# Option settings: hmmsearch -o /dev/null --domtblout dzr_trusted/seeds/seeds.hmmout.txt --noali --domE 1e-05 --cpu 5 dzr_uniref100.gpkg/graftm9yg0etjx_search.hmm - 
+# Current dir:     /home/projects-wrighton/EMERGE/CAMPER/genes/fcr_dzr/uniref100_tree/dzr_graftm
+# Date:            Wed Dec  1 16:13:27 2021
+# [ok]

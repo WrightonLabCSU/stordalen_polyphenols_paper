@@ -1,0 +1,2 @@
+#ID	ncbi_nr_seeds
+graftmxv_qzc1r.aln	1076

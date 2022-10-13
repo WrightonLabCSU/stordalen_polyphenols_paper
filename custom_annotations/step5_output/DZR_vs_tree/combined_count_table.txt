@@ -1,0 +1,2 @@
+#ID	seeds	ConsensusLineage
+1	18	Root; DZR

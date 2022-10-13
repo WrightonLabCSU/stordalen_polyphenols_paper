@@ -1,0 +1,2 @@
+#ID	ncbi_nr_seeds	ConsensusLineage
+1	1076	Root; FCR
