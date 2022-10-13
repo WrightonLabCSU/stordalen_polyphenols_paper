@@ -1,5 +1,9 @@
 # stordalen_polyphenols_paper
 
-## Code associated with [TBD Title].
+This repo contains scripts and commands used for analyses and figure generation in [TBD Title].
 
-This repo contains scripts associated with analyses and figures.
+Table of Contents
+=================
+  * [Overview](https://github.com/WrightonLabCSU/stordalen_polyphenols_paper#overview)
+
+# Overview
