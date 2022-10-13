@@ -1,12 +1,12 @@
 ####
 # step 1: search genes of interest against uniref90 database
-# experimental_seeds.faa = amino acid sequences of all seeds (ie. experimentally characterized)= this can include outgroup sequences/decoys
-# prefix = gene
+# prefix = gene(s)
+# experimental_${prefix}.faa = amino acid sequences of all seeds (ie. experimentally characterized), including outgroup sequences/decoys
 ####
 
 prefix=$1
 cd ../genes/${prefix}
-mmseqs easy-search --threads 10 experimental_seeds.faa /path/to/uniref90.20210826.mmsdb ${prefix}_uniref90_search.m8 tmp2
+mmseqs easy-search --threads 10 experimental_${prefix}.faa /path/to/uniref90.20210826.mmsdb ${prefix}_uniref90_search.m8 tmp2
 
 ####
 # step 2: pull top 300 hits from each uniref90 search and concatenate with experimental seeds
