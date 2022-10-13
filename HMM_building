@@ -1,0 +1,69 @@
+####
+# step 1: search genes of interest against uniref90 database
+# experimental_seeds.faa = amino acid sequences of all seeds (ie. experimentally characterized)= this can include outgroup sequences/decoys
+# prefix = gene
+####
+
+prefix=$1
+cd ../genes/${prefix}
+mmseqs easy-search --threads 10 experimental_seeds.faa /path/to/uniref90.20210826.mmsdb ${prefix}_uniref90_search.m8 tmp2
+
+####
+# step 2: pull top 300 hits from each uniref90 search and concatenate with experimental seeds
+# prefix = gene
+####
+
+prefix=$1
+cd ../genes/${prefix}
+awk -F "\t" '{print $2}' ${prefix}_uniref90_search.m8 > ${prefix}_uniref90_top300.txt
+pullseq_header_name.py -i /path/to/uniref90.fasta -o ${prefix}_uniref90_top300_PULLED.faa -n ${prefix}_uniref90_top300.txt -e F
+cat experimental_seeds.faa ${prefix}_uniref90_top300_PULLED.faa > ${prefix}_uniref90_top300_exp.faa
+
+####
+# step 3: align and make a tree
+# prefix = gene
+####
+
+prefix=$1
+cd ../genes/${prefix}
+
+#Align your sequences, allow mafft to select the approach:
+mafft --auto ${prefix}_uniref90_top300_exp.faa > ${prefix}.mafftauto.faa
+
+#Trim the alignment
+trimal -gappyout -in ${prefix}.mafftauto.faa -out ${prefix}.mafftauto.gappyout.faa
+
+#Run iqtree with extended model selection (ModelFinderPlus) followed by tree inference, 1000 fast bootstraps using
+# UFBoot and SH-aLRT test  (see iqtree FAQ for explanation)
+#See http://www.iqtree.org/doc/ for documentation
+iqtree -s  ${prefix}.mafftauto.gappyout.faa -alrt 1000 -bb 1000 -m MFP -nt AUTO -ntmax 10
+
+#use the .treefile as the final file. 
+
+
+####
+# step 4: [MANUAL] visualize .treefile (ex. ITOL), root tree on clade with decoys, pull sequences that form monophyletic clade with all experimental sequences for a given gene into a file. 
+# IMPORTANT: remove experimental sequences from the file!
+####
+
+####
+# step 5: make HMM with graftM package
+# ${gene}_for_hmm.txt = name of sequences pulled from tree [make sure experimental seqs are not in this file!]
+####
+
+prefix=$1
+gene=$2
+
+cd ../genes/${prefix}
+# pull sequences using names from the tree
+pullseq_header_name.py -n ${gene}_for_hmm.txt -o ${gene}_for_hmm.faa -i ${prefix}_uniref90_top300_exp.faa -e F
+# make taxonomy file for graftM in form: seq_name "\t" gene
+sed "s/$/\t${prefix}/g" ${gene}_for_hmm.txt > ${gene}_tax.txt
+# build graftM package and search it against seqs in original tree
+source /opt/Miniconda2/miniconda2/bin/activate  grafM_0.13.0
+graftM create --sequences ${gene}_for_hmm.faa --taxonomy ${gene}_tax.txt --output ${gene}.gpkg
+graftM graft --forward ${prefix}_uniref90_top300_exp.faa --graftm_package ${gene}.gpkg/ --output_directory ${gene}_vs_tree
+
+####
+# step 6: [MANUAL] use HMM scores against experimental seqs and seqs in monophyletic clade [and scores against decoys] to set HMM score cutoffs
+####
