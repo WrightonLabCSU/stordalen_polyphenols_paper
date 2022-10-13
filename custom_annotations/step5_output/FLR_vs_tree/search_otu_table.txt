@@ -1,0 +1,2 @@
+#ID	flr_uniref90_top300_exp
+graftm7nez6tdf.aln	616

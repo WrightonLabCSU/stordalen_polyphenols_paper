@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	lsd_rzo_uniref90_top300_exp
+reads detected:	1
+reads placed in tree:	1593
+Runtime (seconds):
+Search step:	8.58
+Alignment step:	39.59
+Tree insertion step:	221.98

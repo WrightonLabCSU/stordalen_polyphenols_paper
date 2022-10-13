@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	phy_uniref90_top300_exp
+reads detected:	1
+reads placed in tree:	536
+Runtime (seconds):
+Search step:	2.38
+Alignment step:	7.52
+Tree insertion step:	42.57

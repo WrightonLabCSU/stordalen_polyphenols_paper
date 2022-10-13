@@ -1,0 +1,53 @@
+{
+    "metadata": {
+        "create_date": "2022-01-31 12:24:23",
+        "format_version": "1.1",
+        "locus": "/tmp/tmpct5zpiuw/lsd_rzo_for_hmm"
+    },
+    "files": {
+        "phylo_model": "phylo_modelssfhva7n.json",
+        "aln_fasta": "lsd_rzo_for_hmm_deduplicated_aligned.fasta",
+        "seq_info": "lsd_rzo_for_hmm_seqinfo.csv",
+        "taxonomy": "lsd_rzo_for_hmm_taxonomy.csv",
+        "tree": "treethwimwvc.tre",
+        "tree_stats": "lsd_rzo_for_hmm.tre.log"
+    },
+    "md5": {
+        "phylo_model": "e9604ac6881e6760762549d19c462a6f",
+        "aln_fasta": "1ceb09d6b645fa4c77082ac54eb32ebe",
+        "seq_info": "29b1716843cee8b426707e884a113315",
+        "taxonomy": "34be46363e4bcebc3354fbd062c9e951",
+        "tree": "155bd63bed076a63d2d3fc76485050d4",
+        "tree_stats": "6e74866c60ffd8d14e4a125f9a048f38"
+    },
+    "log": [
+        "Rerooted",
+        "Stripped refpkg (removed 0 files)",
+        "Loaded initial files into empty refpkg"
+    ],
+    "rollback": {
+        "metadata": {
+            "create_date": "2022-01-31 12:24:23",
+            "format_version": "1.1",
+            "locus": "/tmp/tmpct5zpiuw/lsd_rzo_for_hmm"
+        },
+        "files": {
+            "phylo_model": "phylo_modelssfhva7n.json",
+            "aln_fasta": "lsd_rzo_for_hmm_deduplicated_aligned.fasta",
+            "seq_info": "lsd_rzo_for_hmm_seqinfo.csv",
+            "taxonomy": "lsd_rzo_for_hmm_taxonomy.csv",
+            "tree": "lsd_rzo_for_hmm.tre",
+            "tree_stats": "lsd_rzo_for_hmm.tre.log"
+        },
+        "md5": {
+            "phylo_model": "e9604ac6881e6760762549d19c462a6f",
+            "aln_fasta": "1ceb09d6b645fa4c77082ac54eb32ebe",
+            "seq_info": "29b1716843cee8b426707e884a113315",
+            "taxonomy": "34be46363e4bcebc3354fbd062c9e951",
+            "tree": "1df73b7cc4a1c6999ba23f847aff17b8",
+            "tree_stats": "6e74866c60ffd8d14e4a125f9a048f38"
+        },
+        "rollback": null
+    },
+    "rollforward": null
+}

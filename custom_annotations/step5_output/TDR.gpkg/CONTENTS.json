@@ -1,0 +1,1 @@
+{"graftm_package_version": 3, "align_hmm": "graftm1l6mkmfk_align.hmm", "search_hmms": ["graftm3bz7iyv3_search.hmm"], "refpkg": "tdr.gpkg.refpkg", "trusted_cutoff": false, "range": 729.375, "unaligned_sequence_database": "tdr_for_hmm.faa", "diamond_database": "tdr_for_hmm.dmnd"}

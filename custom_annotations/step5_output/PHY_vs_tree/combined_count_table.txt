@@ -1,0 +1,2 @@
+#ID	phy_uniref90_top300_exp	ConsensusLineage
+1	536	Root; phy

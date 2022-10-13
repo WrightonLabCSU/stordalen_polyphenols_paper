@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	ddr_tdr_uniref90_top300_exp
+reads detected:	1
+reads placed in tree:	618
+Runtime (seconds):
+Search step:	4.91
+Alignment step:	12.99
+Tree insertion step:	33.35

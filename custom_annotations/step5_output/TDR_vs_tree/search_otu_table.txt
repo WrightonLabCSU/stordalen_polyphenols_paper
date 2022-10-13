@@ -1,0 +1,2 @@
+#ID	ddr_tdr_uniref90_top300_exp
+graftmo7djyl5u.aln	618

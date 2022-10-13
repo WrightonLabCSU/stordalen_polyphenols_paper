@@ -1,0 +1,2 @@
+#ID	phy_uniref90_top300_exp
+graftmlced53qq.aln	536

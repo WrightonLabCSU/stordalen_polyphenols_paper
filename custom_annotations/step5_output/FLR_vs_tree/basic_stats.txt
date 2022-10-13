@@ -1,0 +1,8 @@
+Basic run statistics (count):
+Files:	flr_uniref90_top300_exp
+reads detected:	1
+reads placed in tree:	616
+Runtime (seconds):
+Search step:	1.4
+Alignment step:	6.96
+Tree insertion step:	51.81

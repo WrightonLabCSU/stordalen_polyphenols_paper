@@ -1,0 +1,2 @@
+#ID	lsd_rzo_uniref90_top300_exp
+graftmdf26z2b1.aln	1593

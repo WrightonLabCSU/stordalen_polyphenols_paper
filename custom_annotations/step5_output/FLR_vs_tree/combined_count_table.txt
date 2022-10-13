@@ -1,0 +1,2 @@
+#ID	flr_uniref90_top300_exp	ConsensusLineage
+1	616	Root; flr
