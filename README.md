@@ -1,9 +1,10 @@
 # stordalen_polyphenols_paper
 
-This repo contains scripts and commands used for analyses and figure generation in [TBD Title].
+This repo contains scripts and commands used for data processing, analyses, and figure generation in **A cache of polyphenol metabolisms discovered in thawing permafrost microbiomes** by McGivern et al. 
 
-Table of Contents
-=================
-  * [Overview](https://github.com/WrightonLabCSU/stordalen_polyphenols_paper#overview)
+Information on development of custom HMMs for polyphenol-active genes can be found [here](https://github.com/WrightonLabCSU/stordalen_polyphenols_paper/tree/main/custom_annotations).
 
-# Overview
+Scripts for data processing can be found [here](https://github.com/WrightonLabCSU/stordalen_polyphenols_paper/tree/main/data_processing).
+
+Scripts for generating figures can be found [here](https://github.com/WrightonLabCSU/stordalen_polyphenols_paper/tree/main/figures).
+
