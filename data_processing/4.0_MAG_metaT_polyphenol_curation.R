@@ -12,8 +12,6 @@ tax = read_excel("Data_S3.xlsx",sheet="MAGs")
 tax=tax%>%select(MAG,GTDB_v2_r207)
 # join metaT abundance with taxonomy
 mag_geTMM=left_join(mag_geTMM,tax,by="MAG")
-# read in phlyum color codes
-phylum=read_excel("Data_S3.xlsx",sheet="color_codes")
 
 # read in MAG metaG abundance
 abund = read_excel("Data_S3.xlsx",sheet="metaG_MAGs")
