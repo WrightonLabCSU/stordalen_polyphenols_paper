@@ -1,0 +1,13 @@
+# creating the Archaeal tree
+gtdbtk de_novo_wf --bacteria --batchfile batchfile.tsv --skip_gtdb_refs --custom_taxonomy_file 97_classification_wOutgroup.txt --outgroup_taxon p__Patescibacteria --out_dir bacteria --cpus 15
+
+# creating the Archaeal tree
+gtdbtk de_novo_wf --archaea --batchfile batchfile.tsv --skip_gtdb_refs --custom_taxonomy_file 97_classification_wOutgroup.txt --outgroup_taxon p__Micrarchaeota --out_dir archaea --cpus 15
+
+# batchfile is 5.1_batchfile.tsv
+# 97_classification_wOutgroup.txt is 5.2_97_classification_wOutgroup.txt
+
+# outputs of these that are used in figures/3.0_figure_3.R
+# 5.3_gtdbtk.ar53.decorated.tree
+# 5.4_gtdbtk.bac120.decorated.tree
+
