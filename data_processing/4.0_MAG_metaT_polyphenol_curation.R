@@ -5,8 +5,8 @@ library(writexl)
 
 set.seed(08211995)
 
-#read in mag-level metaT abundance data
-mag_geTMM = read_excel("Data_S3.xlsx",sheet="metaT_MAGs")
+#read in mag-level metaT abundance data from file stored in Zenodo repository: 10.5281/zenodo.7591900, tab "metaT_genes"
+mag_geTMM = read_excel("metaT_data.xlsx",sheet="metaT_MAGs")
 # read in gtdb v2
 tax = read_excel("Data_S3.xlsx",sheet="MAGs")
 tax=tax%>%select(MAG,GTDB_v2_r207)
