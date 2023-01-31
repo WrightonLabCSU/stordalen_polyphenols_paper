@@ -29,10 +29,7 @@ ave_tidy_abund = tidy_abund %>%
 mag_encoded_paths=read_excel("Data_S2.xlsx",sheet="MAG_metaG_paths")
 mag_encoded_paths= mag_encoded_paths %>%
   select(mag,path,presence)
-#mag_encoded_paths$MAG_ID=paste(mag_encoded_paths$taxonomy,mag_encoded_paths$mag,sep=";")
 mag_encoded_paths$pathway=mag_encoded_paths$path
-#mag_encoded_paths= mag_encoded_paths %>%
-#select(-family.x,-taxonomy)
   
 pp_metaT_mags = read_excel("Data_S2.xlsx",sheet="MAG_metaT_polyphenol_genes")
 info = read_excel("Data_S2.xlsx",sheet="polyphenol_genes")
