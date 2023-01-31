@@ -90,3 +90,5 @@ getmms_df=getmms_df%>%separate(MAG,into=c("MAG",NA),sep="=")
 
 # write a table of per gene/sample geTMM values
 write_xlsx(getmms_df, 'getmms_ge5_1X.xlsx')
+
+# this data is stored in Zenodo repository: 10.5281/zenodo.7591900, tab "metaT_genes"
