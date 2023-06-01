@@ -8,6 +8,10 @@ library(tidyr)
 library(ggnewscale)
 library(cowplot)
 
+#####
+# generating annotated bacterial and archaeal genome trees for figure 3
+#####
+
 # read in GTDB trees (from data_processing)
 bac_tree = read.tree("5.4_gtdbtk.bac120.decorated.tree")
 bac_tree
