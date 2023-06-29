@@ -24,17 +24,17 @@ colnames(annotation)=c("MAG","tax")
 annotation=annotation%>%separate(tax,into=c("d","p","c","o","f","g","s"),sep=";",remove=FALSE)
 
 # read in phylum color codes
-p_colors=read_excel("Data_S3.xlsx",sheet = "color_codes")
+p_colors=read_excel("Supplementary_Table_3.xlsx",sheet = "color_codes")
 
 # read in mag metaG data
-mag_encoded_paths=read_excel("Data_S2.xlsx",sheet="MAG_metaG_paths")
+mag_encoded_paths=read_excel("Supplementary_Table_2.xlsx",sheet="MAG_metaG_paths")
 mag_encoded_paths= mag_encoded_paths %>%
   select(mag,path,presence)
 mag_encoded_paths$pathway=mag_encoded_paths$path
 
 # read in and create MAG metaT data
-pp_metaT_mags = read_excel("Data_S2.xlsx",sheet="MAG_metaT_polyphenol_genes")
-info = read_excel("Data_S2.xlsx",sheet="polyphenol_genes")
+pp_metaT_mags = read_excel("Supplementary_Table_2.xlsx",sheet="MAG_metaT_polyphenol_genes")
+info = read_excel("Supplementary_Table_2.xlsx",sheet="polyphenol_genes")
 info= info %>%select(gene_id,gene_description,Transformation,Substrate,oxygen)
 metaT_genes=inner_join(info,pp_metaT_mags,by=c("gene_id"="ID"))
 
@@ -51,7 +51,7 @@ mag_activity=mag_metaT_paths%>%
 mag_activity%>%ungroup()%>%group_by(MAG)%>%summarise(sum=sum(pa))%>%ungroup()%>%group_by(sum)%>%summarise(n=n())
 
 # get number of pathways encoded per MAG
-paths=read_excel("Data_S2.xlsx", sheet="MAG_metaG_paths")
+paths=read_excel("Supplementary_Table_2.xlsx", sheet="MAG_metaG_paths")
 paths_summary = paths %>%
   select(mag,path,family,presence)%>%
   distinct()%>%
@@ -156,4 +156,3 @@ arc=a+geom_fruit(data=arc_dat,geom=geom_tile,
   geom_highlight(node=90,fill="yellow")
 
 plot_grid(bac,arc)
-
