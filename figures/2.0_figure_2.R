@@ -3,7 +3,8 @@ library(viridis)
 library(tidyr)
 library(dplyr)
 
-paths=read_excel("Data_S2.xlsx",sheet="metaT_pathway_relabun")
+setwd("/Users/mcgivern.9/Desktop/Projects/EMERGE/Manusctipy/final_June2023_Nature/")
+paths=read_excel("Supplementary_Table_2.xlsx",sheet="metaT_pathway_relabun")
 
 ####
 # plotting Fig. 2 and Extended Data Fig. 5
@@ -57,5 +58,3 @@ leveneTest(sum ~ as.factor(site), data = anox)
 
 res_aov <- aov(sum ~ sat,data = anox)
 summary(res_aov) # significant, p=0.000294
-
-
