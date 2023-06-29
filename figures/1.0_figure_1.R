@@ -7,11 +7,11 @@ library(cowplot)
 set.seed(08211995)
 
 # read in Data_S_1
-data_s1_metadata=read_excel("Data_S1.xlsx",sheet="Samples_Metadata")
-data_s1_enzyme_assays=read_excel("Data_S1.xlsx",sheet="Enzyme_Assays")
-data_s1_fc=read_excel("Data_S1.xlsx",sheet="polyphenol_content")
-data_s1_gas=read_excel("Data_S1.xlsx",sheet="porewater_gas")
-data_s1_metaT=read_excel("Data_S1.xlsx",sheet="metaT_enzymes")
+data_s1_metadata=read_excel("Supplementary_Table_1.xlsx",sheet="Samples_Metadata")
+data_s1_enzyme_assays=read_excel("Supplementary_Table_1.xlsx",sheet="Enzyme_Assays")
+data_s1_fc=read_excel("Supplementary_Table_1.xlsx",sheet="polyphenol_content")
+data_s1_gas=read_excel("Supplementary_Table_1.xlsx",sheet="porewater_gas")
+data_s1_metaT=read_excel("Supplementary_Table_1.xlsx",sheet="metaT_enzymes")
 
 # merge sheets
 data_s1=data_s1_metadata%>%
@@ -430,15 +430,12 @@ x12=data_s1%>%
 
 
 #####
-## Kruskal-Wallis ANOVA
+## Mann-Whitney Test
 #####
-# is there a significant difference in gas amount by treatment
-kruskal.test(PPO_metaT~sat, data=data_s1)
-# p-value = 0.005848
-# if yes, run Dunn's test
-dunnTest(PPO_metaT ~ sat,
-         data=data_s1,
-         method="bh")
+# check normality
+shapiro.test(sat_ppo$PPO_metaT) # p-value = 6.608e-05, not normal
+sat_ppo=data_s1%>%select(Sample,sat,PPO_metaT)
+wilcox.test(PPO_metaT~sat,data=sat_ppo, correct=FALSE)
 
 
 # main text plots
