@@ -3,7 +3,6 @@ library(viridis)
 library(tidyr)
 library(dplyr)
 
-setwd("/Users/mcgivern.9/Desktop/Projects/EMERGE/Manusctipy/final_June2023_Nature/")
 paths=read_excel("Supplementary_Table_2.xlsx",sheet="metaT_pathway_relabun")
 
 ####
