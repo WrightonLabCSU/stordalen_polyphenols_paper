@@ -142,7 +142,7 @@ a=ggplot(g_pathways, aes(x = n, y = 1, fill = (0.5 - abs(0.5 - stat(ecdf)))<0.05
 ##########
 # calculating dominance
 ##########
-category=read_excel("4.1_pathway_categories.xlsx",sheet="categories")
+category=read_delim("4.1_pathway_categories.txt",sep="\t")
 
 # removing false positive annotations
 mag_metaT_paths2=mag_metaT_paths%>%filter(gene!="3300037104_19_Ga0395706_017518_1")%>%filter(gene!="3300037104_19_Ga0395706_013576_5")%>%filter(gene!="3300037104_19_Ga0395706_002833_4")%>%filter(gene!="3300037104_19_Ga0395706_002118_12")%>%filter(gene!="20110800_E1S_4_c_000000002448_2")%>%filter(gene!="20120700_S1D_59_c_000000099081_15")%>%filter(gene!="3300037104_19_Ga0395706_001630_7")%>%filter(gene!="PLGY01_ENA|PLGY01000051|PLGY01000051.1_69")%>%filter(gene!="PMEE01_ENA|PMEE01000053|PMEE01000053.1_14")%>%filter(gene!="PMNG01_ENA|PMNG01000155|PMNG01000155.1_37")%>%filter(gene!="PMNG01_ENA|PMNG01000199|PMNG01000199.1_11")%>%filter(gene!="3300037104_19_Ga0395706_002511_1")%>%filter(gene!="20120800_E2X_6_c_000000002298_6")%>%filter(gene!="20120800_E2X_6_c_000000002427_2")%>%filter(gene!="20150700_E25_9_c_000000001274_3")%>%filter(gene!="20150700_E25_9_c_000000001337_8")
