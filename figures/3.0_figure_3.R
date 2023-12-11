@@ -31,7 +31,7 @@ mag_encoded_paths=read_excel("Supplementary_Data_2.xlsx",sheet="MAG_metaG_paths"
 mag_encoded_paths= mag_encoded_paths %>%
   select(mag,path,presence)
 mag_encoded_paths$pathway=mag_encoded_paths$path
-tal_dom=read_excel("tal_dom.xlsx")
+
 # read in and create MAG metaT data
 pp_metaT_mags = read_excel("Supplementary_Data_2.xlsx",sheet="MAG_metaT_polyphenol_genes")
 info = read_excel("Supplementary_Data_2.xlsx",sheet="polyphenol_genes")
@@ -57,6 +57,8 @@ paths_summary = paths %>%
   distinct()%>%
   group_by(mag,family)%>%
   summarise(count=sum(presence))
+
+# read in talent/dominance (from data_processing)
 tal_dom=read.delim("4.2_talent_dominant.txt",sep="\t")
 
 # make bacterial tree
