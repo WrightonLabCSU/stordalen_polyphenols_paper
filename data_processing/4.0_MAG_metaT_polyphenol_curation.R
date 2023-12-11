@@ -119,3 +119,60 @@ paths[is.na(paths)] <- 0
 write_xlsx(paths,"pathway_table_relabun.xlsx")
 # using Supplementary_Table_2 tab polyphenol_genes, figure_2_rxn_number column, remove duplicate entries
 # this will now be Supplementary_Table_2 tab "metaT_pathway_relabun"
+
+
+##########
+# calculating talent
+##########
+g_pathways=mag_metaT_paths%>%left_join(.,tax,by="MAG")%>%separate(GTDB_v2_r207,into=c("d","p","c","o","f","g","s"),sep=";")%>%mutate(genus=paste(d,p,c,o,f,g,sep=";"))%>%filter(geTMM>0)%>%select(genus,site,pathway)%>%distinct()%>%group_by(genus,site)%>%summarise(n=n())
+
+# figuring out the 95% threshold for pathways expressed (talent cut-off)
+quantile(g_pathways$n, probs = 0.95)  
+mean(g_pathways$n) #5.6
+median(g_pathways$n) #4
+sd(g_pathways$n)
+density(g_pathways$n)
+
+a=ggplot(g_pathways, aes(x = n, y = 1, fill = (0.5 - abs(0.5 - stat(ecdf)))<0.05)) +
+  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+  scale_fill_discrete(name = "Tail probability <0.05")+
+  geom_vline(xintercept = 15)+
+  theme_classic()+xlab("Unique Pathways Expressed")+ylab("")
+
+##########
+# calculating dominance
+##########
+category=read_excel("4.1_pathway_categories.xlsx",sheet="categories")
+
+# removing false positive annotations
+mag_metaT_paths2=mag_metaT_paths%>%filter(gene!="3300037104_19_Ga0395706_017518_1")%>%filter(gene!="3300037104_19_Ga0395706_013576_5")%>%filter(gene!="3300037104_19_Ga0395706_002833_4")%>%filter(gene!="3300037104_19_Ga0395706_002118_12")%>%filter(gene!="20110800_E1S_4_c_000000002448_2")%>%filter(gene!="20120700_S1D_59_c_000000099081_15")%>%filter(gene!="3300037104_19_Ga0395706_001630_7")%>%filter(gene!="PLGY01_ENA|PLGY01000051|PLGY01000051.1_69")%>%filter(gene!="PMEE01_ENA|PMEE01000053|PMEE01000053.1_14")%>%filter(gene!="PMNG01_ENA|PMNG01000155|PMNG01000155.1_37")%>%filter(gene!="PMNG01_ENA|PMNG01000199|PMNG01000199.1_11")%>%filter(gene!="3300037104_19_Ga0395706_002511_1")%>%filter(gene!="20120800_E2X_6_c_000000002298_6")%>%filter(gene!="20120800_E2X_6_c_000000002427_2")%>%filter(gene!="20150700_E25_9_c_000000001274_3")%>%filter(gene!="20150700_E25_9_c_000000001337_8")
+total=mag_metaT_paths2%>%left_join(.,tax,by="MAG")%>%separate(GTDB_v2_r207,into=c("d","p","c","o","f","g","s"),sep=";")%>%mutate(genus=paste(d,p,c,o,f,g,sep=";"))%>%filter(geTMM>0)%>%select(genus,sample,site,depth,pathway,geTMM,Substrate)%>%distinct()%>%group_by(genus,sample,site,depth,pathway,Substrate)%>%summarise(sum=sum(geTMM))%>%left_join(.,category,by="pathway")%>%filter(is.na(group)==0)%>%ungroup()%>%distinct()%>%group_by(sample,site,depth,group)%>%summarise(total=sum(sum))
+
+dom=mag_metaT_paths2%>%
+  left_join(.,tax,by="MAG")%>%separate(GTDB_v2_r207,into=c("d","p","c","o","f","g","s"),sep=";")%>%mutate(genus=paste(d,p,c,o,f,g,sep=";"))%>%filter(geTMM>0)%>%select(genus,sample,site,depth,pathway,geTMM,Substrate)%>%distinct()%>%group_by(genus,sample,site,depth,pathway,Substrate)%>%summarise(sum=sum(geTMM))%>%left_join(.,category,by="pathway")%>%filter(is.na(group)==0)%>%ungroup()%>%group_by(genus,sample,site,depth,group)%>%summarise(group_sample_sum=sum(sum))%>%left_join(.,total,by=c("sample","site","depth","group"))%>%mutate(abun=group_sample_sum/total)%>%ungroup()%>%group_by(genus,site,depth,group)%>%summarise(ave_abun=mean(abun))
+# figuring out the 95% threshold for expression (dominance cut-off)
+quantile(dom$ave_abun, probs = 0.95)  
+mean(dom$ave_abun) #5.6
+median(dom$ave_abun) #4
+
+b=ggplot(dom, aes(x = ave_abun*100, y = 1, fill = (0.5 - abs(0.5 - stat(ecdf)))<0.05)) +
+  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+  scale_fill_discrete(name = "Tail probability <0.05")+
+  geom_vline(xintercept = 10)+
+  theme_classic()+xlab("Relative Contribution to Community Polymer, Monomer, or Phenolic/Benzoic Expression (%)")+ylab("")
+
+
+# making som figure 
+plot_grid(a,b,ncol = 1)
+
+
+dom_pass=dom%>%filter(ave_abun>=0.10)%>%ungroup()%>%select(genus)%>%distinct()%>%mutate(dominant="y")
+tal_pass=g_pathways%>%filter(n>=15)%>%ungroup()%>%select(genus)%>%distinct()%>%mutate(talent="y")
+tal_dom=full_join(dom_pass,tal_pass,by="genus")
+write.table(tal_dom,"4.2_talent_dominant.txt", sep="\t")
+
+
+
+
+
+
