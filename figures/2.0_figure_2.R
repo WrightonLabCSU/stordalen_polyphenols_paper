@@ -3,7 +3,7 @@ library(viridis)
 library(tidyr)
 library(dplyr)
 
-paths=read_excel("Supplementary_Table_2.xlsx",sheet="metaT_pathway_relabun")
+paths=read_excel("Supplementary_Data_2.xlsx",sheet="metaT_pathway_relabun")
 
 ####
 # plotting Fig. 2 and Extended Data Fig. 5
