@@ -7,11 +7,11 @@ library(cowplot)
 set.seed(08211995)
 
 # read in Data_S_1
-data_s1_metadata=read_excel("Supplementary_Table_1.xlsx",sheet="Samples_Metadata")
-data_s1_enzyme_assays=read_excel("Supplementary_Table_1.xlsx",sheet="Enzyme_Assays")
-data_s1_fc=read_excel("Supplementary_Table_1.xlsx",sheet="polyphenol_content")
-data_s1_gas=read_excel("Supplementary_Table_1.xlsx",sheet="porewater_gas")
-data_s1_metaT=read_excel("Supplementary_Table_1.xlsx",sheet="metaT_enzymes")
+data_s1_metadata=read_excel("Supplementary_Data_1.xlsx",sheet="Samples_Metadata")
+data_s1_enzyme_assays=read_excel("Supplementary_Data_1.xlsx",sheet="Enzyme_Assays")
+data_s1_fc=read_excel("Supplementary_Data_1.xlsx",sheet="polyphenol_content")
+data_s1_gas=read_excel("Supplementary_Data_1.xlsx",sheet="porewater_gas")
+data_s1_metaT=read_excel("Supplementary_Data_1.xlsx",sheet="metaT_enzymes")
 
 # merge sheets
 data_s1=data_s1_metadata%>%
