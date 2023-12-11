@@ -7,7 +7,7 @@ library(writexl)
 set.seed(08211995)
 
 # Read in Data_S2
-data = read_excel("Supplementary_Table_2.xlsx",sheet="polyphenol_genes")
+data = read_excel("Supplementary_Data_2.xlsx",sheet="polyphenol_genes")
 
 # add column with total number of steps per pathway (sum of points per pathway)
 data_steps= data %>% group_by(Transformation) %>% summarise(sum=sum(points))
@@ -39,7 +39,7 @@ filtered_drep97_mags = wide_mag_paths %>%
 pp_encoding = filtered_drep97_mags$mag
 
 # get MAG taxonomy
-tax=read_excel("Supplementary_Table_3.xlsx",sheet="MAGs")
+tax=read_excel("Supplementary_Data_3.xlsx",sheet="MAGs")
 tax = tax %>%select(MAG, GTDB_v2_r207)
 # make a presence absence data frame of pathways encoded by MAGs
 pa = filtered_drep97_mags
