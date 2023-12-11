@@ -1,0 +1,59 @@
+pathway	group
+Quercetin degradation (oxic)	monomer
+Curcumin Conversion	monomer
+Pinoresinol Conversion Route 1 (anoxic)	monomer
+Naringenin Degradation (oxic)	monomer
+Sesamin Conversion (anoxic)	monomer
+Dehydroconiferyl alcohol conversion (oxic or anoxic)	monomer
+Resveratrol conversion to HydroxyBenzaldehydes (oxic)	monomer
+Pinoresinol Conversion (oxic)	monomer
+Flavanone Degradation (oxic)	monomer
+Isoflavonoid conversion (anoxic)	monomer
+Flavonol degradation to phloroglucinol (anoxic)	monomer
+Pinoresinol Conversion Route 2 (anoxic)	monomer
+Caffeate Respiration (anoxic)	phenolic
+Coniferyl Alcohol Conversion to Ferulic Acid (oxic)	phenolic
+Homogentisic Acid degradation (oxic)	phenolic
+Phloroglucinol degradation (anoxic)	phenolic
+Gentisic Acid degradation Route 1 (oxic)	phenolic
+Gentisic Acid degradation Route 2 (oxic)	phenolic
+Homoprotocatechuic Acid degradation (oxic)	phenolic
+Benzoyl-CoA Degradation Route 1 (anoxic)	phenolic
+phenylacteate degradation (oxic)	phenolic
+Protocatechuic Acid Degradation- Ortho-cleavage (oxic)	phenolic
+p-hydroxyphenyl conversion to homogentisate (oxic)	phenolic
+Chlorogenic Acid Cleavage (oxic or anoxic)	phenolic
+Benzoyl-CoA degradation (oxic)	phenolic
+Ferulic Acid Conversion to Vanillin (oxic)	phenolic
+Benzoate degradation to Protocatechuic Acid (oxic)	phenolic
+Protocatechuic Acid Degradation- Meta-cleavage (oxic)	phenolic
+Resorcylic Acid Degradation (oxic)	phenolic
+Catechol Degradation- Ortho Cleavage (oxic)	phenolic
+Pyrogallol conversion to phloroglucinol (anoxic)	phenolic
+Salicylic Acid conversion to Catechol (oxic)	phenolic
+Salicylic Acid conversion to Gentisic Acid Route 2 (oxic)	phenolic
+vanillate conversion to protocatechuate Route 1 (oxic)	phenolic
+Isoeugenol conversion to vanillin (oxic)	phenolic
+Catechol Degradation- Meta-Cleavage Route 2 (oxic)	phenolic
+Phenylacetate conversion to benzoyl-coA (anoxic)	phenolic
+Benzoyl-CoA Degradation Route 2 (anoxic)	phenolic
+Eugenol Conversion to Coniferyl Alcohol (oxic)	phenolic
+Benzene Conversion to Phenol (oxic)	phenolic
+Phenol Conversion to Catechol (oxic)	phenolic
+Catechol Degradation- Meta-Cleavage Route 1 (oxic)	phenolic
+4-hydroxybenzoate conversion to benzoyl-CoA (anoxic)	phenolic
+Benzoate degradation to catechol (oxic)	phenolic
+O-Toluate degradation to 3-methylcatechol (oxic)	phenolic
+Phenylpropionate degradation (oxic)	phenolic
+Gallate degradation (oxic)	phenolic
+Phthalate conversion to protocatechuic acid Route 1 (oxic)	phenolic
+m-cresol conversion to 3-methylcatechol (oxic)	phenolic
+Phenol conversion to 4-Hydroxybenzoate (anoxic)	phenolic
+4-Hydroxyphenylacetate conversion to Homoprotocatechuic Acid (oxic)	phenolic
+Benzoate conversion to Benzoyl-CoA (oxic or anoxic)	phenolic
+Benzoyl-CoA Degradation Route 3 (anoxic)	phenolic
+vanillin conversion to vanillate (oxic)	phenolic
+Peroxidase (Non-Specific)	polymer
+Benzoquinone Reductase (Non-Specific)	polymer
+Polyphenol Oxidase (Non-specific)	polymer
+Vanillyl-Alcohol conversion to Vanillate (oxic)	polymer
