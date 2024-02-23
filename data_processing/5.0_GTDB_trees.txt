@@ -1,4 +1,4 @@
-# creating the Archaeal tree
+# creating the Bacterial tree
 gtdbtk de_novo_wf --bacteria --batchfile batchfile.tsv --skip_gtdb_refs --custom_taxonomy_file 97_classification_wOutgroup.txt --outgroup_taxon p__Patescibacteria --out_dir bacteria --cpus 15
 
 # creating the Archaeal tree
